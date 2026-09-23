@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-Content-Type-Type" content="text/html; charset=utf-8">
+    <title>Café & Cacau</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css?v=25">
+    <script src="carrinho3.js"></script>
+</body>
+</head>
+<body>
+   
+    <div id="btn-carrinho-flutuante" onclick="abrirFecharCarrinho()">
+        🛒 <span id="contador-carrinho">0</span>
+    </div>
+
+    <div id="carrinho-lateral">
+        <div class="topo-carrinho">
+            <h3>Seu Pedido</h3>
+            <span class="fechar-carrinho" onclick="abrirFecharCarrinho()">❌</span>
+        </div>
+
+        <div id="itens-do-carrinho">
+            </div>
+
+        <div class="total-carrinho">
+            <h4>Total: <span id="valor-total">R$ 0,00</span></h4>
+            <button class="btn-finalizar" onclick="finalizarPedidoComPontos()">Finalizar Pedido</button>
+        </div>
+    </div>
+
+    <div id="header">
+        <img src="logo3.png" class="logo" alt="Logo Café e Cacau">
+        <h1 id="titulo-centro">Café & Cacau</h1>
+
+        <div id="area-usuario">
+            <button id="btn-cadastro" onclick="simularLogin()">👤 Entrar </button>
+
+            <div id="painel-fidelidade">
+                <p class="boas-vindas-user">Olá, <strong id="nome-user">Cliente</strong>!</p>
+                <img id="barra-fidelidade-img" src="gomo0.png" alt="Barra de Fidelidade">
+                <div class="fidelidade-premium-container">
+    <div id="chocolate-3d-fundo"></div>
+    
+    <div class="grade-gomos-fidelidade">
+        <div class="gomo-premium" id="gomo-1"></div>
+        <div class="gomo-premium" id="gomo-2"></div>
+        <div class="gomo-premium" id="gomo-3"></div>
+        <div class="gomo-premium" id="gomo-4"></div>
+        <div class="gomo-premium" id="gomo-5"></div>
+        <div class="gomo-premium" id="gomo-6"></div>
+        <div class="gomo-premium" id="gomo-7"></div>
+        <div class="gomo-premium" id="gomo-8"></div>
+    </div>
+</div>
+                
+                <p class="texto-pontos-fidelidade"><span id="qtd-pontos">0</span> / 1000 pts</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="menu-navegacao">
+        <a href="#">Início</a>
+        <a href="#">Categorias</a>
+        <a href="#">Horários</a>
+        <a href="#">Contatos</a>
+    </div>
+
+    <div class="boas-vindas">
+        <h2>Cafés e Chocolates, Momentos que Acolhem.</h2>
+    </div>
+    <div class="caixa-pesquisa">
+    <input 
+        type="text" 
+        id="campo-pesquisa" 
+        placeholder="Pesquise por um café ou chocolate..." 
+        onkeyup="filtrarProdutos()"
+    >
+    <button type="button">Buscar</button>
+</div>
+
+
+    <div class="layout-loja">
+        <div class="barra-categorias">
+            <h3>Categorias</h3>
+            <button class="btn-categoria active" onclick="filtrarCategoria('todos')">✨ Mostrar Tudo</button>
+            <button class="btn-categoria" onclick="filtrarCategoria('cappuccino')">☕ Cappuccinos</button>
+            <button class="btn-categoria" onclick="filtrarCategoria('cafes-gelados')">🧊 Cafés Gelados</button>
+            <button class="btn-categoria" onclick="filtrarCategoria('coados')">⏳ Cafés Coados</button>
+            <button class="btn-categoria" onclick="filtrarCategoria('docinhos')">🧁 Docinhos</button>
+            <button class="btn-categoria" onclick="filtrarCategoria('chocolate')">🍫 Chocolates Quentes</button>
+            <button class="btn-categoria" onclick="filtrarCategoria('barra')">💎 Cacau de Origem</button>
+            <button class="btn-categoria" onclick="filtrarCategoria('barras')">🍰 Tortas Especiais</button>
+        </div>
+
+        <div class="area-products">
+            <div class="area-produtos">
+
+                <div class="item-cardapio cappuccino">
+                    <div class="foto-produto real-foto">
+                        <img src="cafe1.png" alt="Cappuccino Italiano">
+                    </div>
+                    <h3>Cappuccino Italiano</h3>
+                    <p class="descricao-item">Expresso blend da casa, leite vaporizado cremoso e uma pitada de cacau.</p>
+                    <div class="preco-botao">
+                        <span class="preco">R$ 14,90</span>
+                        <button class="btn-pedir" onclick="adicionarAoCarrinho('Cappuccino Italiano', 14.90)">Pedir</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio cappuccino">
+                    <div class="foto-produto real-foto">
+                        <img src="cafe2.png" alt="Cappuccino Canela">
+                    </div>
+                    <h3>Cappuccino Canela</h3>
+                    <p class="descricao-item">Nosso cappuccino tradicional com uma camada extra de canela e chantilly.</p>
+                    <div class="preco-botao">
+                        <span class="preco">R$ 15,90</span>
+                        <button class="btn-pedir" onclick="adicionarAoCarrinho('Cappuccino Canela', 15.90)">Pedir</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio chocolate promocoes">
+                    <div class="foto-produto real-foto">
+                        <img src="cafe4.png" alt="Chocolate Quente">
+                    </div>
+                    <h3>Chocolate Cremoso</h3>
+                    <p class="descricao-item">Feito com puro cacau 70% derretido, leite integral e um toque sutil de baunilha.</p>
+                    <div class="preco-botao">
+                        <span class="preco">R$ 16,50</span>
+                        <button class="btn-pedir" onclick="adicionarAoCarrinho('Chocolate Cremoso', 16.50)">Pedir</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio cafes-gelados">
+                    <div class="foto-produto real-foto">
+                        <img src="cafe5.png" alt="Frappuccino de Cacau">
+                    </div>
+                    <h3>Frappuccino de Cacau</h3>
+                    <p class="descricao-item">Café expresso batido com gelo, leite, calda artesanal de cacau e chantilly.</p>
+                    <div class="preco-botao">
+                        <span class="preco">R$ 17,90</span>
+                        <button class="btn-pedir" onclick="adicionarAoCarrinho('Frappuccino de Cacau', 17.90)">Pedir</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio coados">
+                    <div class="foto-produto real-foto">
+                        <img src="doce6.png" alt="Café Especial Bourbon Amarelo">
+                    </div>
+                    <h3>Café Especial Bourbon Amarelo</h3>
+                    <p class="descricao-item">Grãos selecionados de torra média, coados na hora no filtro de papel tradicional.</p>
+                    <div class="preco-botao">
+                        <span class="preco">R$ 18,50</span>
+                        <button class="btn-pedir" onclick="adicionarAoCarrinho('Café Especial Bourbon Amarelo', 18.50)">Pedir</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio barra">
+                    <div class="foto-produto real-foto">
+                        <img src="cafe6.png" alt="Barra 80% Cacau">
+                    </div>
+                    <h3>Barra Cacau Amazônico 80%</h3>
+                    <p class="descricao-item">Chocolate intenso de origem controlada com notas frutadas e textura aveludada.</p>
+                    <div class="preco-botao">
+                        <span class="preco">R$ 14,00</span>
+                        <button class="btn-pedir" onclick="adicionarAoCarrinho('Barra Cacau Amazônico 80%', 14.00)">Pedir</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio docinhos">
+                    <div class="foto-produto real-foto">
+                        <img src="doce1.png" alt="Brigadeiros Belgas">
+                    </div>
+                    <h3>Trilogia de Brigadeiros Belgas</h3>
+                    <p class="descricao-item">Três brigadeiros gourmet enrolados no puro chocolate belga: tradicional, branco e café.</p>
+                    <div class="preco-botao">
+                        <span class="preco">R$ 12,00</span>
+                        <button class="btn-pedir" onclick="adicionarAoCarrinho('Trilogia de Brigadeiros Belgas', 12.00)">Pedir</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio docinhos">
+                    <div class="foto-produto real-foto">
+                        <img src="doce4.png" alt="Éclair de Café">
+                    </div>
+                    <h3>Éclair (Bomba) de Café e Chocolate</h3>
+                    <p class="descricao-item">Aquela massa folhada e leve, recheada com creme de confeiteiro de café e cobertura de chocolate.</p>
+                    <div class="preco-botao">
+                        <span class="preco">R$ 11,90</span>
+                        <button class="btn-pedir" onclick="adicionarAoCarrinho('Éclair (Bomba) de Café e Chocolate', 11.90)">Pedir</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio barras">
+                    <div class="foto-produto real-foto">
+                        <img src="doce3.png" alt="Torta Banoffee">
+                    </div>
+                    <h3>Torta Banoffee de Cacau</h3>
+                    <p class="descricao-item">Uma releitura da famosa torta de banana com doce de leite, mas com massa leve de cacau e polvilhada.</p>
+                    <div class="preco-botao">
+                        <span class="preco">R$ 22,90</span>
+                        <button class="btn-pedir" onclick="adicionarAoCarrinho('Torta Banoffee de Cacau', 22.90)">Pedir</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio barras">
+                    <div class="foto-produto real-foto">
+                        <img src="doce5.png" alt="Torta Holandesa">
+                    </div>
+                    <h3>Torta Holandesa de Café</h3>
+                    <p class="descricao-item">A clássica torta holandesa, mas com o creme levemente aromatizado com grãos de café expresso.</p>
+                    <div class="preco-botao">
+                        <span class="preco">R$ 25,90</span>
+                        <button class="btn-pedir" onclick="adicionarAoCarrinho('Torta Holandesa de Café', 25.90)">Pedir</button>
+                    </div>
+                </div>
+
+                <div class="item-cardapio barras">
+                    <div class="foto-produto real-foto">
+                        <img src="doce2.png" alt="Torta Três Chocolates">
+                    </div>
+                    <h3>Torta Três Chocolates</h3>
+                    <p class="descricao-item">Uma base crocante de biscoito de cacau com três camadas de mousse: meio amargo, ao leite e branco.</p>
+                    <div class="preco-botao">
+                        <span class="preco">R$ 19,90</span>
+                        <button class="btn-pedir" onclick="adicionarAoCarrinho('Torta Três Chocolates', 19.90)">Pedir</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="rodape-container">
+            <p><strong>📍 Endereço:</strong> Av. Central do Sabor, 123 - Centro | <strong>⏰ Funcionamento:</strong> Segunda a Sábado: 07:30 às 19:30</p>
+            <p class="direitos">&copy; 2026 Café & Cacau - Todos os direitos reservados.</p>
+        </div>
+    </div>
+
+
+</body>
+</html>
