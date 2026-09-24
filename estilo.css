@@ -1,0 +1,649 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    background-color: #f9eae1;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO (TOPO MARROM & LOGIN)
+   ========================================================================== */
+#header {
+    width: 100%;         
+    height: 250px;       
+    background: #432818; 
+    position: relative;  
+    margin-bottom: 0; 
+}
+
+.logo {
+    width: 210px;        
+    height: 210px;        
+    object-fit: contain;
+    display: block;
+    position: absolute;
+    top: 20px;           
+    left: 40px;          
+}
+
+#titulo-centro {
+    color: #f9eae1;      
+    font-size: 60px;     
+    font-family: 'Georgia', serif; 
+    text-transform: uppercase; 
+    letter-spacing: 4px;     
+    width: 100%;         
+    text-align: left;    
+    padding-left: 270px;  
+    padding-top: 85px;   
+}
+
+/* ÁREA DE LOGIN E FIDELIDADE NO TOPO */
+#area-usuario {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1005;
+}
+
+#btn-cadastro {
+    background-color: #f9eae1;
+    color: #432818;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s;
+}
+
+#btn-cadastro:hover {
+    transform: scale(1.05);
+}
+
+#painel-fidelidade {
+    margin-top: 12px;
+    text-align: right;
+    background-color: rgba(33, 16, 7, 0.85);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #542e17;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+/* REGRA PARA A BARRA DE CHOCOLATE NO PAINEL */
+#barra-fidelidade-img {
+    width: 230px;       
+    height: auto;          
+    display: block;        
+    margin-top: 8px;      
+    margin-left: auto;     
+    border-radius: 4px;    
+}
+.boas-vindas-user {
+    color: #f9eae1;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.texto-pontos-fidelidade {
+    color: #e6b89c;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+/* ==========================================================================
+   3. MENU DE NAVEGAÇÃO
+   ========================================================================== */
+#menu-navegacao {
+    display: flex;
+    justify-content: center;
+    background-color: #5d3a21; 
+    padding: 14px;
+}
+
+#menu-navegacao a {
+    color: #f9eae1;
+    text-decoration: none;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    margin: 0 25px; 
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#menu-navegacao a:hover {
+    color: #e6b89c; 
+}
+
+/* ==========================================================================
+   4. BARRA DE PESQUISA ARREDONDADA
+   ========================================================================== */
+.caixa-pesquisa {
+    display: flex;
+    justify-content: center; 
+    padding-top: 0px;      
+    margin-bottom: 2px;    
+}
+
+.caixa-pesquisa input[type="text"] {
+    width: 450px;           
+    padding: 14px 20px;     
+    font-size: 16px;        
+    font-family: Arial, sans-serif;
+    border: 1px solid #432818; 
+    border-radius: 30px 0 0 30px; 
+    outline: none;          
+    background-color: #ffffff;
+    color: #432818;
+}
+
+.caixa-pesquisa button {
+    background-color: #432818; 
+    color: #f9eae1;           
+    padding: 14px 30px;
+    font-size: 16px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 0 30px 30px 0; 
+    cursor: pointer;          
+    transition: background 0.3s; 
+}
+
+.caixa-pesquisa button:hover {
+    background-color: #5d3a21; 
+}
+
+/* ==========================================================================
+   5. CONTEÚDO PRINCIPAL (SLOGAN E VITRINE)
+   ========================================================================== */
+#content {
+    width: 100%;
+    background: #f9eae1; 
+    margin-top: 0;       
+    padding: 20px;
+}
+
+.boas-vindas {
+    text-align: center;
+    padding: 30px 20px;
+    color: #432818;
+}
+
+.boas-vindas h2 {
+    font-family: 'Georgia', serif;
+    font-size: 32px;
+    margin-bottom: 0px;
+}
+
+.boas-vindas p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.vitrine-produtos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 10px;
+}
+
+.produto-card {
+    background-color: #ffffff; 
+    border: 1px solid #e6b89c;
+    border-radius: 12px;
+    padding: 30px 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(67, 40, 24, 0.08); 
+}
+
+.produto-card h3 {
+    color: #432818;
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.produto-card p {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+/* ==========================================================================
+   6. ESTRUTURA DA LOJA (CATEGORIAS + PRODUTOS)
+   ========================================================================== */
+.layout-loja {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.barra-categorias {
+    width: 320px;
+    min-width: 280px;
+    background-color: #8b7163; 
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    height: fit-content;
+}
+
+.barra-categorias h3 {
+    color: #f9eae1;
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 26px;
+    font-family: 'Georgia', serif;
+    border-bottom: 2px solid #f9eae1;
+    padding-bottom: 8px;
+}
+
+.btn-categoria {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #f9eae1;
+    cursor: pointer;
+    border-radius: 11px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.btn-categoria:hover {
+    background-color: #f9eae1;
+    color: #432818;
+}
+
+.btn-categoria.active {
+    background-color: #432818;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.area-produtos {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* ==========================================================================
+   7. SEÇÃO DE CARDÁPIO COM PREÇOS
+   ========================================================================== */
+.titulo-secao {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #432818;
+}
+
+.titulo-secao h2 {
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+}
+
+.titulo-secao p {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.item-cardapio {
+    background-color: #ffffff;
+    border: 1px solid #e6b89c;
+    border-radius: 15px;
+    width: 260px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(67, 40, 24, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s;
+}
+
+.item-cardapio:hover {
+    transform: translateY(-5px);
+}
+
+.real-foto {
+    width: 100%;
+    height: 160px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f0f0f0;
+    margin-bottom: 15px;
+}
+
+.real-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.item-cardapio h3 {
+    color: #432818;
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.descricao-item {
+    color: #666666;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+.preco-botao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f2ded1;
+    padding-top: 15px;
+}
+
+.preco {
+    color: #8c4f2b;
+    font-size: 20px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+}
+
+.btn-pedir {
+    background-color: #432818;
+    color: #f9eae1;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-pedir:hover {
+    background-color: #8c4f2b;
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   8. SISTEMA DE CARRINHO DE COMPRAS LATERAL (DESIGN CLARO & LIXEIRA)
+   ========================================================================== */
+
+/* BOTÃO FLUTUANTE */
+#btn-carrinho-flutuante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #8c4f2b;
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(140, 79, 43, 0.25);
+    z-index: 1000;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s;
+}
+
+#btn-carrinho-flutuante:hover {
+    transform: scale(1.1) translateY(-3px);
+    background-color: #703e21;
+}
+
+#contador-carrinho {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background-color: #e74c3c;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* GAVETA LATERAL */
+#carrinho-lateral {
+    position: fixed;
+    top: 0;
+    right: -380px;
+    width: 380px;
+    height: 100vh;
+    background-color: #f9eae1; /* Fundo creme super aconchegante */
+    box-shadow: -10px 0 30px rgba(67, 40, 24, 0.15);
+    z-index: 2000;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+#carrinho-lateral.aberto, 
+#carrinho-lateral.ativo {
+    right: 0;
+}
+
+.topo-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e6b89c;
+    padding-bottom: 18px;
+    margin-bottom: 15px;
+}
+
+.topo-carrinho h3 {
+    color: #432818;
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+.fechar-carrinho {
+    cursor: pointer;
+    font-size: 20px;
+    color: #432818;
+    opacity: 0.8;
+    transition: transform 0.2s;
+}
+
+.fechar-carrinho:hover {
+    transform: scale(1.2) rotate(90deg);
+    opacity: 1;
+}
+
+/* LISTA DOS ITENS ADICIONADOS */
+#itens-do-carrinho {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* CARDS DOS ITENS DENTRO DO CARRINHO */
+.item-lista-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(67, 40, 24, 0.05);
+    font-family: Arial, sans-serif;
+    color: #432818;
+    border: 1px solid #e6b89c;
+}
+
+/* BOTÕES DE + - E LIXEIRA */
+.item-lista-carrinho .controles-quantidade {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.item-lista-carrinho .btn-menos,
+.item-lista-carrinho .btn-mais {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: transform 0.15s;
+}
+
+.item-lista-carrinho .btn-menos {
+    background-color: #f2ded1;
+    color: #8c4f2b;
+}
+
+.item-lista-carrinho .btn-mais {
+    background-color: #8c4f2b;
+    color: white;
+}
+
+.item-lista-carrinho .btn-menos:hover,
+.item-lista-carrinho .btn-mais:hover {
+    transform: scale(1.1);
+}
+
+/* BOTÃO DE LIXEIRA 🗑️ */
+.btn-remover {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.7;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-remover:hover {
+    opacity: 1;
+    transform: scale(1.25);
+}
+
+.preco-subtotal {
+    color: #432818;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* RODAPÉ DO CARRINHO */
+.total-carrinho {
+    border-top: 2px solid #e6b89c;
+    padding-top: 15px;
+}
+
+.total-carrinho h4 {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    color: #432818;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#valor-total {
+    color: #a3592c;
+    font-weight: bold;
+}
+
+.btn-finalizar {
+    width: 100%;
+    background-color: #432818;
+    color: #f9eae1;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(67, 40, 24, 0.15);
+    transition: all 0.2s ease;
+}
+
+.btn-finalizar:hover {
+    background-color: #8c4f2b;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   9. RODAPÉ DO SITE (FOOTER)
+   ========================================================================== */
+#footer {
+    background-color: #432818;
+    color: #f9eae1;
+    padding: 25px 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 50px;
+    border-top: 3px solid #a3592c;
+    width: 100%;
+}
+
+.rodape-container p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+#footer strong {
+    color: #ff9f43;
+}
+
+#footer .direitos {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 15px;
+}
